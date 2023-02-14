@@ -1,0 +1,33 @@
+//Normalize styles
+@import "vendor";
+
+//Fonts
+@import "fonts";
+
+//CSS variables - colors
+$mainBlack = #372E11;
+$mainWhite = #FFFBED;
+$mainYellow = #FFE182;
+
+//CSS variables - screens
+
+$desktop-low: 1300px;
+$laptop: 1024px;
+$tablet: 768px;
+$phone-low: 360px;
+
+
+//Main styles
+* {
+  font-family: "Inter";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//Blocks
+
+@import "./blocks/header";
+@import "./blocks/flowers";
+@import "./blocks/form";
+@import "./blocks/footer";

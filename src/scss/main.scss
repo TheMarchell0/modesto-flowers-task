@@ -5,9 +5,9 @@
 @import "fonts";
 
 //CSS variables - colors
-$mainBlack = #372E11;
-$mainWhite = #FFFBED;
-$mainYellow = #FFE182;
+$mainBlack: #372e11;
+$mainWhite: #fffbed;
+$mainYellow: #ffe182;
 
 //CSS variables - screens
 
@@ -16,10 +16,13 @@ $laptop: 1024px;
 $tablet: 768px;
 $phone-low: 360px;
 
+//CSS variables - transition
+
+$defaultTransition: 0.1s linear;
 
 //Main styles
 * {
-  font-family: "Inter";
+  font-family: "Raleway";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,6 +30,7 @@ $phone-low: 360px;
 
 //Blocks
 
+@import "./blocks/core";
 @import "./blocks/header";
 @import "./blocks/flowers";
 @import "./blocks/form";

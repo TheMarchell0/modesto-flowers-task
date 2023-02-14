@@ -1,2 +1,103 @@
 .form {
+  &__bg {
+    & img {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    display: flex;
+    padding: 80px;
+    margin-top: 199px;
+    background-color: $mainWhite;
+    max-width: 1140px;
+
+    &-bg {
+      position: absolute;
+      display: none;
+    }
+  }
+
+  &__text {
+    color: $mainBlack;
+    flex: 580px 0 0;
+
+    &-title {
+      font-family: "Marmelad";
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 43px;
+      margin-bottom: 40px;
+    }
+
+    &-descr {
+      font-family: "Raleway";
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &-inputs {
+    margin-left: 81px;
+
+    &__slide {
+      &-list {
+        &-item {
+          display: flex;
+          flex-direction: column;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          color: $mainBlack;
+
+          &:not(:last-child) {
+            margin-bottom: 21px;
+          }
+
+          &_buttons {
+            flex-direction: row;
+            align-items: center;
+          }
+        }
+      }
+
+      &-input {
+        background: #fff8e1;
+        border-radius: 6px;
+        border: none;
+        padding: 17px 8px 15px;
+
+        &:focus-visible {
+          outline: none;
+        }
+
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder,
+        &:-moz-placeholder,
+        &::placeholder,
+        & {
+          font-weight: inherit;
+          font-size: inherit;
+          line-height: inherit;
+          color: #8e825c;
+        }
+      }
+
+      &-label {
+        margin-bottom: 9px;
+      }
+    }
+
+    &-button {
+      margin-top: 40px;
+    }
+  }
 }

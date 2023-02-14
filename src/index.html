@@ -15,20 +15,413 @@
     <title>Международная цветочная онлайн-площадка</title>
   </head>
   <body>
-    <main>
-      <h1>
-        Мы будем рады сотрудничать с вами на платформе 'Международной цветочной
-        онлайн-площадки'!
-      </h1>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+    <header class="header">
+      <div class="header__container container">
+        <picture class="header__bg-flower">
+          <source srcset="./images/flower.png 1x, ./images/flower@2x.png 2x" />
+          <img
+            src="./images/flower.png"
+            srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+            alt="Header flower background"
+          />
+        </picture>
+        <picture class="header__logo">
+          <source
+            srcset="./images/header-logo.png 1x, ./images/header-logo@2x.png 2x"
+          />
+          <img
+            src="./images/header-logo.png"
+            srcset="./images/header-logo.png 1x, ./images/header-logo@2x.png 2x"
+            alt="Header logo"
+          />
+        </picture>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-list-item">Магазины</li>
+            <li class="header__nav-list-item">Контакты</li>
+            <li class="header__nav-list-item">О нас</li>
+          </ul>
+        </nav>
+        <a href="tel:+36787547894" class="header__tel">+3 67 8754 7894</a>
+        <ul class="header__lang">
+          <li class="header__lang-item">
+            <input
+              class="header__lang-radio"
+              type="radio"
+              id="lang-ru"
+              name="lang-radio"
+              checked
+            />
+            <label class="header__lang-label" for="lang-ru">Ru</label>
+          </li>
+          <li class="header__lang-item">
+            <input
+              class="header__lang-radio"
+              type="radio"
+              id="lang-en"
+              name="lang-radio"
+            />
+            <label class="header__lang-label" for="lang-en">Eng</label>
+          </li>
+        </ul>
+        <ul class="header__auth">
+          <li class="header__auth-button">Войти</li>
+          <li class="header__auth-button header__auth-button_acc">
+            Создать аккаунт
+          </li>
+        </ul>
       </div>
+    </header>
+    <main class="main">
+      <section class="main__flowers flowers">
+        <ul class="flowers__bg block-absolute">
+          <li class="flowers__bg-item">
+            <picture>
+              <source
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+              />
+              <img
+                src="./images/flower.png"
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+                alt="Header flower background"
+              />
+            </picture>
+          </li>
+          <li class="flowers__bg-item">
+            <picture>
+              <source
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+              />
+              <img
+                src="./images/flower.png"
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+                alt="Header flower background"
+              />
+            </picture>
+          </li>
+          <li class="flowers__bg-item">
+            <picture>
+              <source
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+              />
+              <img
+                src="./images/flower.png"
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+                alt="Header flower background"
+              />
+            </picture>
+          </li>
+          <li class="flowers__bg-item">
+            <picture>
+              <source
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+              />
+              <img
+                src="./images/flower.png"
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+                alt="Header flower background"
+              />
+            </picture>
+          </li>
+          <li class="flowers__bg-item">
+            <picture>
+              <source
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+              />
+              <img
+                src="./images/flower.png"
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+                alt="Header flower background"
+              />
+            </picture>
+          </li>
+          <li class="flowers__bg-item">
+            <picture>
+              <source
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+              />
+              <img
+                src="./images/flower.png"
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+                alt="Header flower background"
+              />
+            </picture>
+          </li>
+          <li class="flowers__bg-item">
+            <picture>
+              <source
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+              />
+              <img
+                src="./images/flower.png"
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+                alt="Header flower background"
+              />
+            </picture>
+          </li>
+          <li class="flowers__bg-item">
+            <picture>
+              <source
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+              />
+              <img
+                src="./images/flower.png"
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+                alt="Header flower background"
+              />
+            </picture>
+          </li>
+        </ul>
+        <div class="flowers__container container">
+          <h1 class="flowers__title">
+            Мы будем рады сотрудничать с вами на платформе 'Международной
+            цветочной онлайн-площадки'!
+          </h1>
+          <h2 class="flowers__descr">
+            Присоединяйтесь к нам и начните получать доход с бизнеса в первый
+            месяц регистрации!
+          </h2>
+          <div class="flowers__buttons">
+            <button class="flowers__buttons-item">Начать покупать</button>
+            <button class="flowers__buttons-item">Начать продавать</button>
+          </div>
+        </div>
+      </section>
+      <section class="main__form form">
+        <picture class="form__bg block-absolute">
+          <source
+            srcset="./images/form-bg.png 1x, ./images/form-bg@2x.png 2x"
+          />
+          <img
+            src="./images/form-bg.png"
+            srcset="./images/form-bg.png 1x, ./images/form-bg@2x.png 2x"
+            alt="Form background"
+          />
+        </picture>
+        <div class="form__container container">
+          <div class="form__content">
+            <picture class="form__content-bg">
+              <source
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+              />
+              <img
+                src="./images/flower.png"
+                srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+                alt="Form container background"
+              />
+            </picture>
+            <div class="form__content-text form__text">
+              <h3 class="form__text-title">
+                Заполните форму и начните развивать свой бизнес прямо сейчас!
+              </h3>
+              <p class="form__text-descr">
+                Регистрация на нашем сайте занимает несколько минут, просим
+                ответить на все вопросы полностью и корректно! После
+                подтверждения регистрации вы попадёте в систему, где большинство
+                процессов автоматизированы, что сэкономит ваше время и деньги!
+              </p>
+            </div>
+            <div class="form__content-inputs form__inputs form-inputs swiper">
+              <div class="form-inputs__wrapper swiper-wrapper">
+                <div class="form-inputs__slide swiper-slide">
+                  <ul class="form-inputs__slide-list">
+                    <li class="form-inputs__slide-list-item">
+                      <label class="form-inputs__slide-label" for="inputs-name"
+                        >Ваше имя</label
+                      >
+                      <input
+                        class="form-inputs__slide-input"
+                        id="inputs-name"
+                        placeholder="Фролова Александра Васильевна"
+                        type="text"
+                      />
+                    </li>
+                    <li class="form-inputs__slide-list-item">
+                      <label
+                        class="form-inputs__slide-label"
+                        for="inputs-company"
+                        >Название Компании</label
+                      >
+                      <input
+                        class="form-inputs__slide-input"
+                        id="inputs-company"
+                        placeholder="ООО Атлантика"
+                        type="text"
+                      />
+                    </li>
+                    <li class="form-inputs__slide-list-item">
+                      <label class="form-inputs__slide-label" for="inputs-mail"
+                        >E-mail</label
+                      >
+                      <input
+                        class="form-inputs__slide-input"
+                        id="inputs-mail"
+                        placeholder="flolovaalexa@com.rur"
+                        type="email"
+                      />
+                    </li>
+                    <li class="form-inputs__slide-list-item">
+                      <label class="form-inputs__slide-label" for="inputs-phone"
+                        >Номер телефона</label
+                      >
+                      <input
+                        class="form-inputs__slide-input"
+                        id="inputs-phone"
+                        placeholder="+7 (XXX) - XXX XX XX"
+                        type="tel"
+                      />
+                    </li>
+                    <li class="form-inputs__slide-list-item">
+                      <label class="form-inputs__slide-label" for="inputs-code"
+                        >Промокод</label
+                      >
+                      <input
+                        class="form-inputs__slide-input"
+                        id="inputs-code"
+                        placeholder="HGF864"
+                        type="text"
+                      />
+                    </li>
+                  </ul>
+                  <div class="form-inputs__button swiper-button-next">
+                    Далее
+                  </div>
+                </div>
+                <div class="form-inputs__slide swiper-slide">
+                  <ul class="form-inputs__slide-list">
+                    <li class="form-inputs__slide-list-item">
+                      <label
+                        class="form-inputs__slide-label"
+                        for="inputs-password"
+                        >Пароль</label
+                      >
+                      <input
+                        class="form-inputs__slide-input"
+                        id="inputs-password"
+                        placeholder="Создайте пароль"
+                        type="password"
+                      />
+                    </li>
+                    <li class="form-inputs__slide-list-item">
+                      <label
+                        class="form-inputs__slide-label"
+                        for="inputs-password-confirm"
+                        >Подтвердите пароль</label
+                      >
+                      <input
+                        class="form-inputs__slide-input"
+                        id="inputs-password-confirm"
+                        placeholder="Повторите пароль"
+                        type="password"
+                      />
+                    </li>
+                    <li class="form-inputs__slide-list-item">
+                      <picture class="form-inputs__slide-captcha">
+                        <source
+                          srcset="
+                            ./images/captcha.png    1x,
+                            ./images/captcha@2x.png 2x
+                          "
+                        />
+                        <img
+                          src="./images/captcha.png"
+                          srcset="
+                            ./images/captcha.png    1x,
+                            ./images/captcha@2x.png 2x
+                          "
+                          alt="Form captcha"
+                        />
+                      </picture>
+                    </li>
+                    <li class="form-inputs__slide-list-item">
+                      <label
+                        class="form-inputs__slide-label"
+                        for="inputs-captcha"
+                        >Введите символы из картинки</label
+                      >
+                      <input
+                        class="form-inputs__slide-input"
+                        id="inputs-captcha"
+                        placeholder="Код из картинки"
+                        type="text"
+                      />
+                    </li>
+                    <li
+                      class="form-inputs__slide-list-item form-inputs__slide-list-item_buttons"
+                    >
+                      <div class="form-inputs__button swiper-button-prev">
+                        Назад
+                      </div>
+                      <button class="form-inputs__button">Подтвердить</button>
+                    </li>
+                    <li class="form-inputs__slide-list-item">
+                      <input
+                        class="form-inputs__slide-list-checkbox"
+                        id="inputs-checkbox"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-inputs__slide-list-label"
+                        for="inputs-checkbox"
+                        >Я даю согласие на обработку моих персональных данных и
+                        правовых документов</label
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__offices offices">
+          <h4 class="offices__title">Наши офисы</h4>
+          <div class="offices__item">
+            <p class="offices__loc">Московский офис</p>
+            <a href="tel:+74552678907">+7 455 267-89-07</a>
+            <address class="offices__address">
+              Берсеневский пер., д. 56, стр. 4,
+            </address>
+            <address class="offices__address">
+              Берсеневский пер., д. 56, стр. 4, 6-й эт., Москва, 567754
+            </address>
+          </div>
+          <div class="offices__item">
+            <p class="offices__loc">Ростовский офис</p>
+            <a href="tel:+78788880167">+7 878 888-01-67</a>
+            <address class="offices__address">
+              Берсеневский пер., д. 56, стр. 4,
+            </address>
+            <address class="offices__address">
+              Буденовский пр-т, д. 84, 6-й эт., Ростов-на-Дону, 679965
+            </address>
+          </div>
+        </div>
+        <div class="footer__social-media social-media">
+          <h4 class="social-media__title">Мы в соц сетях</h4>
+          <ul class="social-media__list">
+            <li class="social-media__list-item"><a href="#">Instagram</a></li>
+            <li class="social-media__list-item"><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact contact">
+          <h4 class="contact__title">Свяжитесь с нами</h4>
+          <ul class="contact__list">
+            <li class="contact__list-item">
+              <a href="tel:+36787547894">+3 67 8754 7894</a>
+            </li>
+            <li class="contact__list-item">
+              <a href="mailto:mflowers@flo.com">mflowers@flo.com</a>
+            </li>
+            <li class="contact__list-item">
+              <button class="contact__button">Написать</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

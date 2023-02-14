@@ -1,2 +1,107 @@
 .flowers {
+  &__bg {
+    &-item {
+      position: absolute;
+
+      &:nth-child(1) {
+        width: 61px;
+        top: 77px;
+        left: 442px;
+      }
+
+      &:nth-child(2) {
+        width: 1002px;
+        top: 5px;
+        left: -622px;
+        transform: rotate(180deg);
+      }
+
+      &:nth-child(3) {
+        width: 229px;
+        bottom: 32px;
+        left: 378px;
+      }
+
+      &:nth-child(4) {
+        width: 61px;
+        bottom: 53px;
+        left: 949px;
+      }
+
+      &:nth-child(5) {
+        width: 845px;
+        bottom: -334px;
+        right: -233px;
+      }
+
+      &:nth-child(6) {
+        width: 61px;
+        bottom: 432px;
+        right: 15px;
+      }
+
+      &:nth-child(7) {
+        width: 86px;
+        top: 386px;
+        right: 345px;
+      }
+
+      &:nth-child(8) {
+        width: 148px;
+        top: 100px;
+        right: 133px;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 887px;
+    padding-top: 185px;
+    padding-bottom: 292px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__descr {
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 31px;
+    max-width: 730px;
+    width: 100%;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 57px;
+
+    &-item {
+      background-color: $mainYellow;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 21px;
+      border-radius: 12px;
+      padding: 22px 34px;
+      transition: $defaultTransition;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &:not(:last-child) {
+        margin-right: 23px;
+      }
+
+      &:last-child {
+        padding: 24px 40px;
+        background-color: #ededed;
+      }
+    }
+  }
 }

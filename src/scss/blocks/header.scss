@@ -1,2 +1,120 @@
 .header {
+  font-family: "Raleway";
+  color: $mainBlack;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    max-width: 1450px;
+    padding-top: 18px;
+  }
+
+  &__bg-flower {
+    position: absolute;
+    width: 88px;
+    top: -32px;
+    left: 754px;
+  }
+
+  &__logo {
+    width: 98px;
+    display: block;
+  }
+
+  &__nav {
+    flex: 53.7% 0 0;
+    display: flex;
+    justify-content: center;
+
+    &-list {
+      display: flex;
+      align-items: center;
+
+      &-item {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        transition: $defaultTransition;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.5;
+        }
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+
+  &__tel {
+    font-family: "Roboto";
+    font-weight: 700;
+    color: $mainBlack;
+    font-size: 20px;
+    line-height: 23px;
+    flex: 15% 0 0;
+    display: flex;
+    justify-content: center;
+    transition: $defaultTransition;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+
+    &-radio:checked + .header__lang-label {
+      color: initial;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 6px;
+      }
+    }
+
+    &-label {
+      color: #9b9b99;
+      cursor: pointer;
+      transition: $defaultTransition;
+    }
+  }
+
+  &__auth {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    flex: auto;
+    justify-content: flex-end;
+
+    &-button {
+      cursor: pointer;
+      transition: $defaultTransition;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+
+      &_acc {
+        border: 1px solid #000000;
+        border-radius: 12px;
+        padding: 14px 30px;
+      }
+    }
+  }
 }

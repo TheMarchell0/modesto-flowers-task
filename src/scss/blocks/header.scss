@@ -7,6 +7,16 @@
     align-items: center;
     max-width: 1450px;
     padding-top: 18px;
+
+    @media (max-width: $laptop) {
+      max-width: 760px;
+      padding-top: 20px;
+      justify-content: space-between;
+    }
+
+    @media (max-width: $tablet) {
+      padding-top: 7px;
+    }
   }
 
   &__bg-flower {
@@ -19,12 +29,46 @@
   &__logo {
     width: 98px;
     display: block;
+
+    @media (max-width: $tablet) {
+      width: 48px;
+    }
   }
 
   &__nav {
     flex: 53.7% 0 0;
     display: flex;
     justify-content: center;
+
+    @media (max-width: $desktop-big) {
+      flex: 44.7% 0 0;
+    }
+
+    @media (max-width: $desktop-low) {
+      flex: 38% 0 0;
+    }
+
+    &_desktop {
+      @media (max-width: $laptop) {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      display: flex;
+
+      & .header__nav-list {
+        flex-direction: column;
+        align-items: center;
+
+        & .header__nav-list-item {
+          &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
 
     &-list {
       display: flex;
@@ -59,17 +103,43 @@
     justify-content: center;
     transition: $defaultTransition;
 
+    @media (max-width: $desktop-low) {
+      flex: 18% 0 0;
+    }
+
+    @media (max-width: $laptop) {
+      display: flex;
+      flex: 247px 0 0;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: $tablet) {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      flex: 122px 0 0;
+    }
+
     &:hover {
       opacity: 0.5;
     }
   }
 
   &__lang {
-    display: flex;
+    display: none;
     align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    flex: 75px 0 0;
+    justify-content: flex-end;
 
-    @media (min-width: $tablet) {
-      display: none;
+    @media (max-width: $laptop) {
+      display: flex;
+    }
+
+    @media (max-width: $tablet) {
+      flex: 63px 0 0;
     }
 
     &-radio:checked + .header__lang-label {
@@ -78,7 +148,7 @@
 
     &-item {
       &:not(:last-child) {
-        margin-right: 6px;
+        margin-right: 3px;
       }
     }
 
@@ -86,6 +156,16 @@
       color: #9b9b99;
       cursor: pointer;
       transition: $defaultTransition;
+
+      @media (max-width: $tablet) {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      @media (max-width: $phone-low) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -98,6 +178,10 @@
     flex: auto;
     justify-content: flex-end;
 
+    @media (max-width: $laptop) {
+      flex: 52px 0 0;
+    }
+
     &-button {
       cursor: pointer;
       transition: $defaultTransition;
@@ -108,12 +192,106 @@
 
       &:not(:last-child) {
         margin-right: 40px;
+
+        @media (max-width: $laptop) {
+          margin-right: 0;
+        }
       }
 
       &_acc {
         border: 1px solid #000000;
         border-radius: 12px;
         padding: 14px 30px;
+
+        @media (max-width: $laptop) {
+          display: none;
+        }
+      }
+    }
+
+    &_desktop {
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      flex-direction: column;
+      margin-top: 50px;
+
+      & .header__auth-button {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        &:first-child {
+          display: none;
+
+          @media (max-width: $tablet) {
+            display: block;
+          }
+        }
+
+        &_acc {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+    transition: $defaultTransition;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    @media (max-width: $laptop) {
+      display: block;
+    }
+
+    @media (max-width: $tablet) {
+      max-width: 30px;
+      width: 100%;
+    }
+  }
+
+  &__mobile-menu {
+    transition: 0.3s linear;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(100%);
+    height: 100vh;
+    z-index: 2000;
+    background: $mainWhite;
+    padding: 40px 0;
+    overflow: hidden;
+
+    &_open {
+      transform: translateX(0);
+      overflow: auto;
+    }
+
+    &-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-size: 30px;
+    }
+
+    &-flower {
+      position: absolute;
+      width: 320px;
+      left: -57px;
+      top: -110px;
+
+      @media (max-width: $tablet) {
+        width: 220px;
+        left: -79px;
+        top: -44px;
       }
     }
   }

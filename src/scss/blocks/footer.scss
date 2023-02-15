@@ -1,4 +1,211 @@
 .footer {
   background-color: $mainBlack;
   color: $mainWhite;
+
+  & a {
+    color: $mainWhite;
+    transition: $defaultTransition;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__container {
+    max-width: 1451px;
+    padding-top: 81px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+
+    @media (max-width: $desktop-big) {
+      max-width: 1200px;
+    }
+
+    @media (max-width: $desktop-low) {
+      max-width: 1000px;
+    }
+
+    @media (max-width: $laptop) {
+      padding-top: 33px;
+      max-width: 753px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-height: 526px;
+      padding-bottom: 31px;
+    }
+
+    @media (max-width: $tablet) {
+      max-height: initial;
+    }
+  }
+
+  & h4 {
+    font-family: "Marmelad";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__copyright {
+    display: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #b9b3b3;
+    margin-top: 49px;
+
+    @media (max-width: $laptop) {
+      display: block;
+    }
+
+    @media (max-width: $tablet) {
+      order: 1;
+    }
+  }
+}
+
+.offices {
+  display: grid;
+  grid-template-rows: 52px 1fr;
+  grid-column-gap: 20px;
+  flex: 618px 0 0;
+
+  @media (max-width: $desktop-low) {
+    flex: 550px 0 0;
+  }
+
+  @media (max-width: $laptop) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 52px repeat(2, 1fr);
+    flex: 255px 0 0;
+    max-width: 275px;
+  }
+
+  &__title {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    @media (max-width: $laptop) {
+      grid-column-start: initial;
+      grid-column-end: initial;
+    }
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  &__tel {
+  }
+  &__address {
+    font-style: normal;
+  }
+}
+
+.social-media {
+  flex: 202px 0 0;
+
+  @media (max-width: $laptop) {
+    flex: auto;
+    margin-top: 30px;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+  }
+
+  &__list {
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      & a {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+.contact {
+  @media (max-width: $laptop) {
+    padding-left: 151px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-left: 0;
+    margin-top: 47px;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+  }
+
+  &__list {
+    &-item {
+      &:first-child a {
+        font-family: "Roboto";
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      & a {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+      }
+    }
+
+    &-button {
+      background: $mainYellow;
+      color: $mainBlack;
+      padding: 16px 65px 12px 32px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      position: relative;
+      transition: $defaultTransition;
+
+      @media (max-width: $laptop) {
+        max-width: 247px;
+        width: 100%;
+      }
+
+      @media (max-width: $tablet) {
+        max-width: 172px;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background: url("/images/email-icon.svg") no-repeat center;
+        right: 32px;
+
+        @media (max-width: $laptop) {
+          right: 70px;
+        }
+
+        @media (max-width: $tablet) {
+          right: 29px;
+        }
+      }
+    }
+  }
 }

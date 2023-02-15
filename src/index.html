@@ -35,7 +35,7 @@
             alt="Header logo"
           />
         </picture>
-        <nav class="header__nav">
+        <nav class="header__nav header__nav_desktop">
           <ul class="header__nav-list">
             <li class="header__nav-list-item">Магазины</li>
             <li class="header__nav-list-item">Контакты</li>
@@ -46,7 +46,7 @@
         <ul class="header__lang">
           <li class="header__lang-item">
             <input
-              class="header__lang-radio"
+              class="header__lang-radio visually-hidden"
               type="radio"
               id="lang-ru"
               name="lang-radio"
@@ -56,7 +56,7 @@
           </li>
           <li class="header__lang-item">
             <input
-              class="header__lang-radio"
+              class="header__lang-radio visually-hidden"
               type="radio"
               id="lang-en"
               name="lang-radio"
@@ -64,12 +64,43 @@
             <label class="header__lang-label" for="lang-en">Eng</label>
           </li>
         </ul>
-        <ul class="header__auth">
+        <ul class="header__auth header__auth_desktop">
           <li class="header__auth-button">Войти</li>
           <li class="header__auth-button header__auth-button_acc">
             Создать аккаунт
           </li>
         </ul>
+        <button id="header-burger" class="header__burger">
+          <img src="./images/burger-menu.svg" alt="Burger icon" />
+        </button>
+        <div class="header__mobile-menu js-header">
+          <picture class="header__mobile-menu-flower">
+            <source
+              srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+            />
+            <img
+              src="./images/flower.png"
+              srcset="./images/flower.png 1x, ./images/flower@2x.png 2x"
+              alt="Header mobile menu background"
+            />
+          </picture>
+          <button id="header-burger-close" class="header__mobile-menu-close">
+            X
+          </button>
+          <nav class="header__mobile-menu-nav header__nav header__nav_mobile">
+            <ul class="header__nav-list">
+              <li class="header__nav-list-item">Магазины</li>
+              <li class="header__nav-list-item">Контакты</li>
+              <li class="header__nav-list-item">О нас</li>
+            </ul>
+          </nav>
+          <ul class="header__auth header__auth_mobile">
+            <li class="header__auth-button">Войти</li>
+            <li class="header__auth-button header__auth-button_acc">
+              Создать аккаунт
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -234,6 +265,7 @@
                         id="inputs-name"
                         placeholder="Фролова Александра Васильевна"
                         type="text"
+                        autocomplete="off"
                       />
                     </li>
                     <li class="form-inputs__slide-list-item">
@@ -247,6 +279,7 @@
                         id="inputs-company"
                         placeholder="ООО Атлантика"
                         type="text"
+                        autocomplete="off"
                       />
                     </li>
                     <li class="form-inputs__slide-list-item">
@@ -258,6 +291,7 @@
                         id="inputs-mail"
                         placeholder="flolovaalexa@com.rur"
                         type="email"
+                        autocomplete="off"
                       />
                     </li>
                     <li class="form-inputs__slide-list-item">
@@ -268,7 +302,8 @@
                         class="form-inputs__slide-input"
                         id="inputs-phone"
                         placeholder="+7 (XXX) - XXX XX XX"
-                        type="tel"
+                        type="number"
+                        autocomplete="off"
                       />
                     </li>
                     <li class="form-inputs__slide-list-item">
@@ -280,16 +315,22 @@
                         id="inputs-code"
                         placeholder="HGF864"
                         type="text"
+                        maxlength="6"
+                        autocomplete="off"
                       />
                     </li>
+                    <li class="form-inputs__slide-list-item">
+                      <div class="form-inputs__button swiper-button-next">
+                        Далее
+                      </div>
+                    </li>
                   </ul>
-                  <div class="form-inputs__button swiper-button-next">
-                    Далее
-                  </div>
                 </div>
                 <div class="form-inputs__slide swiper-slide">
                   <ul class="form-inputs__slide-list">
-                    <li class="form-inputs__slide-list-item">
+                    <li
+                      class="form-inputs__slide-list-item form-inputs__slide-list-item_password"
+                    >
                       <label
                         class="form-inputs__slide-label"
                         for="inputs-password"
@@ -300,9 +341,12 @@
                         id="inputs-password"
                         placeholder="Создайте пароль"
                         type="password"
+                        autocomplete="off"
                       />
                     </li>
-                    <li class="form-inputs__slide-list-item">
+                    <li
+                      class="form-inputs__slide-list-item form-inputs__slide-list-item_password"
+                    >
                       <label
                         class="form-inputs__slide-label"
                         for="inputs-password-confirm"
@@ -313,9 +357,12 @@
                         id="inputs-password-confirm"
                         placeholder="Повторите пароль"
                         type="password"
+                        autocomplete="off"
                       />
                     </li>
-                    <li class="form-inputs__slide-list-item">
+                    <li
+                      class="form-inputs__slide-list-item form-inputs__slide-list-item_captcha"
+                    >
                       <picture class="form-inputs__slide-captcha">
                         <source
                           srcset="
@@ -344,6 +391,8 @@
                         id="inputs-captcha"
                         placeholder="Код из картинки"
                         type="text"
+                        maxlength="5"
+                        autocomplete="off"
                       />
                     </li>
                     <li
@@ -354,14 +403,16 @@
                       </div>
                       <button class="form-inputs__button">Подтвердить</button>
                     </li>
-                    <li class="form-inputs__slide-list-item">
+                    <li
+                      class="form-inputs__slide-list-item form-inputs__slide-list-item_checkbox"
+                    >
                       <input
-                        class="form-inputs__slide-list-checkbox"
+                        class="form-inputs__slide-checkbox"
                         id="inputs-checkbox"
                         type="checkbox"
                       />
                       <label
-                        class="form-inputs__slide-list-label"
+                        class="form-inputs__slide-label form-inputs__slide-label_checkbox"
                         for="inputs-checkbox"
                         >Я даю согласие на обработку моих персональных данных и
                         правовых документов</label
@@ -381,20 +432,14 @@
           <h4 class="offices__title">Наши офисы</h4>
           <div class="offices__item">
             <p class="offices__loc">Московский офис</p>
-            <a href="tel:+74552678907">+7 455 267-89-07</a>
-            <address class="offices__address">
-              Берсеневский пер., д. 56, стр. 4,
-            </address>
+            <a class="offices__tel" href="tel:+74552678907">+7 455 267-89-07</a>
             <address class="offices__address">
               Берсеневский пер., д. 56, стр. 4, 6-й эт., Москва, 567754
             </address>
           </div>
           <div class="offices__item">
             <p class="offices__loc">Ростовский офис</p>
-            <a href="tel:+78788880167">+7 878 888-01-67</a>
-            <address class="offices__address">
-              Берсеневский пер., д. 56, стр. 4,
-            </address>
+            <a class="offices__tel" href="tel:+78788880167">+7 878 888-01-67</a>
             <address class="offices__address">
               Буденовский пр-т, д. 84, 6-й эт., Ростов-на-Дону, 679965
             </address>
@@ -407,6 +452,7 @@
             <li class="social-media__list-item"><a href="#">Facebook</a></li>
           </ul>
         </div>
+        <p class="footer__copyright">Авторские права 2008-2022 M-flowers.com</p>
         <div class="footer__contact contact">
           <h4 class="contact__title">Свяжитесь с нами</h4>
           <ul class="contact__list">
@@ -417,7 +463,7 @@
               <a href="mailto:mflowers@flo.com">mflowers@flo.com</a>
             </li>
             <li class="contact__list-item">
-              <button class="contact__button">Написать</button>
+              <button class="contact__list-button">Написать</button>
             </li>
           </ul>
         </div>

@@ -44,6 +44,11 @@ h1 {
   line-height: 67px;
   color: $mainBlack;
   margin: 0;
+
+  @media (max-width: $tablet) {
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 
 main,
@@ -86,29 +91,8 @@ img {
   right: initial;
   left: initial;
   height: initial;
-  width: 100%;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  color: $mainBlack;
-  border-radius: 12px;
-  margin-top: 40px;
-  padding: 16px 40px;
-  transition: $defaultTransition;
-
-  &:hover {
-    opacity: 0.5;
-  }
 
   &::after {
     display: none;
   }
-}
-
-.swiper-button-next {
-  background-color: $mainYellow;
-}
-
-.swiper-button-prev {
-  background-color: #ededed;
 }

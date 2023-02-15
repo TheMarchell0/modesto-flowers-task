@@ -1,8 +1,24 @@
 .form {
   &__bg {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1920px;
+
     & img {
       width: auto;
-      height: auto;
+    }
+
+    @media (max-width: $laptop) {
+      max-width: 1024px;
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      max-width: 768px;
     }
   }
 
@@ -13,14 +29,46 @@
 
   &__content {
     display: flex;
-    padding: 80px;
-    margin-top: 199px;
+    padding: 80px 80px 65px;
     background-color: $mainWhite;
     max-width: 1140px;
+    margin: 199px 0 201px;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: $desktop-low) {
+      padding: 80px 40px 65px;
+    }
+
+    @media (max-width: $laptop) {
+      max-width: 689px;
+      margin: 41px 0 40px;
+      padding: 34px 32px 10px;
+      flex-direction: column;
+    }
+
+    @media (max-width: $tablet) {
+      max-width: 318px;
+      margin: 21px 0 20px;
+      padding: 22px 19px 16px;
+    }
 
     &-bg {
       position: absolute;
-      display: none;
+      width: 803px;
+      transform: rotate(180deg);
+      left: -153px;
+      bottom: -454px;
+
+      @media (max-width: $desktop-low) {
+        left: -40px;
+        bottom: -200px;
+        width: 500px;
+      }
+
+      @media (max-width: $laptop) {
+        display: none;
+      }
     }
   }
 
@@ -28,12 +76,26 @@
     color: $mainBlack;
     flex: 580px 0 0;
 
+    @media (max-width: $desktop-low) {
+      flex: 500px 0 0;
+    }
+
+    @media (max-width: $laptop) {
+      flex: auto;
+    }
+
     &-title {
       font-family: "Marmelad";
       font-weight: 400;
       font-size: 36px;
       line-height: 43px;
       margin-bottom: 40px;
+
+      @media (max-width: $tablet) {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 30px;
+      }
     }
 
     &-descr {
@@ -41,14 +103,42 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 21px;
+
+      @media (max-width: $tablet) {
+        font-size: 16px;
+        line-height: 19px;
+      }
     }
   }
 
   &-inputs {
     margin-left: 81px;
 
+    @media (max-width: $laptop) {
+      margin-top: 57px;
+      margin-left: 0;
+      width: 100%;
+    }
+
+    @media (max-width: $tablet) {
+      margin-top: 32px;
+    }
+
     &__slide {
       &-list {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $laptop) {
+          flex-wrap: wrap;
+          max-height: 300px;
+          width: 100%;
+        }
+
+        @media (max-width: $tablet) {
+          max-height: initial;
+        }
+
         &-item {
           display: flex;
           flex-direction: column;
@@ -61,9 +151,74 @@
             margin-bottom: 21px;
           }
 
+          &:first-child {
+            @media (max-width: $laptop) {
+              margin-right: 40px;
+            }
+          }
+
+          &:nth-child(3n + 3) {
+            @media (min-width: $tablet) and (max-width: $laptop) {
+              margin-bottom: 0;
+            }
+          }
+          @media (max-width: $laptop) {
+            max-width: 292px;
+            width: 100%;
+          }
+
           &_buttons {
             flex-direction: row;
             align-items: center;
+            margin-top: 41px;
+
+            @media (max-width: $laptop) {
+              order: 2;
+            }
+
+            @media (max-width: $tablet) {
+              order: initial;
+              margin-top: 2px;
+            }
+
+            & .form-inputs__button {
+              margin-top: 0;
+              &:not(:last-child) {
+                margin-right: 10px;
+
+                @media (max-width: $laptop) {
+                  margin-right: 8px;
+                }
+              }
+            }
+          }
+
+          &_password {
+            @media (max-width: $laptop) {
+              order: -1;
+            }
+            @media (max-width: $tablet) {
+              order: initial;
+            }
+          }
+
+          &_captcha {
+            @media (max-width: $laptop) {
+              order: 1;
+            }
+
+            @media (max-width: $tablet) {
+              order: initial;
+            }
+          }
+
+          &_checkbox {
+            @media (max-width: $laptop) {
+              order: 3;
+            }
+            @media (max-width: $tablet) {
+              order: initial;
+            }
           }
         }
       }
@@ -89,15 +244,109 @@
           line-height: inherit;
           color: #8e825c;
         }
+
+        &#inputs-captcha,
+        &#inputs-code {
+          text-transform: uppercase;
+
+          &::-webkit-input-placeholder,
+          &::-moz-placeholder,
+          &:-ms-input-placeholder,
+          &:-moz-placeholder,
+          &::placeholder,
+          & {
+            text-transform: initial;
+          }
+        }
+      }
+
+      &-checkbox:checked + .form-inputs__slide-label_checkbox::after {
+        opacity: 1;
       }
 
       &-label {
         margin-bottom: 9px;
+
+        &_checkbox {
+          position: relative;
+          padding-left: 30px;
+          font-family: "PT-Sans";
+          font-weight: 400;
+          max-width: 300px;
+          line-height: 18px;
+
+          &:hover {
+            &::before {
+              opacity: 0.5;
+            }
+          }
+
+          &::before,
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            cursor: pointer;
+            transition: $defaultTransition;
+          }
+
+          &::before {
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 0;
+            background: #0e493f;
+            border-radius: 4px;
+          }
+
+          &::after {
+            top: 6px;
+            left: 4px;
+            width: 10px;
+            height: 7px;
+            background: url("/images/white-mark.svg") no-repeat center;
+            opacity: 0;
+          }
+        }
       }
     }
 
-    &-button {
+    &__button {
       margin-top: 40px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: $mainBlack;
+      border-radius: 12px;
+      padding: 16px 40px;
+      background-color: $mainYellow;
+      width: 100%;
+      transition: $defaultTransition;
+
+      @media (max-width: $laptop) {
+        margin-top: 22px;
+        padding: 16px 37px;
+      }
+
+      @media (max-width: $tablet) {
+        padding: 16px 30px;
+      }
+
+      @media (max-width: $phone-low) {
+        font-size: 13px;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &.swiper-button-prev {
+        background-color: #ededed;
+
+        @media (max-width: $laptop) {
+          padding: 16px 30px;
+        }
+      }
     }
   }
 }
